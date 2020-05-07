@@ -39,7 +39,6 @@ fn static_noise(width: i32, height: i32) -> Noise {
 fn padded_noise(width: i32, height: i32, padding: i32) -> Noise {
     let mut rng = rand::thread_rng();
     let mut values: Vec<f64> = vec![];
-    // initial pass setting key points
     for x in 0..width {
         for y in 0..height {
             if x % padding == 0 && y % padding == 0 {
